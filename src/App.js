@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Slideshow list={["a", "b"]}/>
+      <Slideshow list={["a", "b", "c"]}/>
     </div>
   );
 }

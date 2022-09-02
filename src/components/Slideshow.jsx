@@ -9,7 +9,7 @@ export default function Slideshow(props) {
     const [index, setIndex] = useState(0);
     useEffect(() => {
       const timer = setTimeout(
-        () => (setIndex(index==props.length-1? 0 : index+1)),
+        () => (setIndex((index===props.list.length-1)? 0 : index+1)),
         5000
       );
       return () => clearTimeout(timer);
