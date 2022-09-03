@@ -1,11 +1,12 @@
 import logo from "../images/logo_title.png"
 import logoText from "../images/logo_text.png"
 import { useState, useEffect } from "react";
-import "../styles/navbar.css";
+import "../styles/slideshow.css";
 import React from "react";
 
 export default function Slideshow(props) {
 
+    const fade = false;
     const [index, setIndex] = useState(0);
     useEffect(() => {
       const timer = setTimeout(
@@ -15,5 +16,9 @@ export default function Slideshow(props) {
       return () => clearTimeout(timer);
     });
 
-    return <div>{props.list[index]}</div>;
+    return (
+        <div className={fade? "fadeOut img" : "img"}>
+          <img src={props.list[index]} style={{"width": "100%"}}/>
+        </div>
+    );
 }
