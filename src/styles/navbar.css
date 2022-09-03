@@ -244,11 +244,6 @@ figure.sixteen-nine-img {
   100% {opacity: 0.1}
 }
 
-.fadeOut{
-  opacity: 0.1;
-  transition: all 0.4s;
-}
-
 /*Flex Features*/
 
 .flex-container {
