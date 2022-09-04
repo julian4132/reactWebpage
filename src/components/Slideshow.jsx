@@ -6,19 +6,27 @@ import React from "react";
 
 export default function Slideshow(props) {
 
-    const [fade, setFade] = useState(false);
+    const [fade, setFade] = useState(0);
     const [index, setIndex] = useState(0);
     useEffect(() => {
-      if(fade){
+      console.log(fade);
+      if(fade==1){
       const timer = setTimeout(
-        () => (setIndex((index===props.list.length-1)? 0 : index+1), console.log("hola"), setFade(false)),
-        250
+        () => (setIndex((index===props.list.length-1)? 0 : index+1), setFade(2)),
+        100
       );
       return () => clearTimeout(timer);
     }
+      else if(fade==2){
+        const timer = setTimeout(
+          () => (setFade(0)),
+          100
+        );
+        return () => clearTimeout(timer);
+      }
     else{
       const timer = setTimeout(
-        () => (setFade(true)),
+        () => (setFade(1)),
         4750
       );
       return () => clearTimeout(timer);
@@ -26,7 +34,7 @@ export default function Slideshow(props) {
     });
 
     return (
-        <div className={fade? "fadeOut img" : "fadeIn img"}>
+        <div className={fade==0? "fadeIn img" : "fadeOut img"}>
           <img src={props.list[index]} style={{"width": "100%"}}/>
         </div>
     );
