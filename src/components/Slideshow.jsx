@@ -11,7 +11,7 @@ export default function Slideshow(props) {
     useEffect(() => {
       if(fade){
       const timer = setTimeout(
-        () => (setFade(false), setIndex((index===props.list.length-1)? 0 : index+1)),
+        () => (setIndex((index===props.list.length-1)? 0 : index+1), console.log("hola"), setFade(false)),
         250
       );
       return () => clearTimeout(timer);
