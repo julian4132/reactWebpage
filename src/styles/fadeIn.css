@@ -1,12 +1,26 @@
-.fade-in-section {
+.fade-left-section {
     opacity: 0;
-    transform: translateY(20vh);
+    transform: translateX(8vh);
     visibility: hidden;
     transition: opacity 1200ms ease-out, transform 600ms ease-out,
       visibility 1200ms ease-out;
     will-change: opacity, transform, visibility;
   }
-  .fade-in-section.is-visible {
+  .fade-right-section {
+    opacity: 0;
+    transform: translateX(-8vh);
+    visibility: hidden;
+    transition: opacity 1200ms ease-out, transform 600ms ease-out,
+      visibility 1200ms ease-out;
+    will-change: opacity, transform, visibility;
+  }
+  .fade-left-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+  }
+
+  .fade-right-section.is-visible {
     opacity: 1;
     transform: none;
     visibility: visible;

@@ -1,6 +1,7 @@
 import Navbar from './components/Navbar.jsx';
 import Slideshow from './components/Slideshow.jsx';
 import AccessButton from './components/AccessButton.jsx';
+import RightAccessButton from './components/RightAccessButton.jsx';
 import FadeIn from './components/FadeIn.jsx'
 import './App.css';
 import Pedri from './images/pedri.jpg'
@@ -20,11 +21,8 @@ function App() {
       <Navbar />
       <Slideshow list={[Pedri, Messi, Cristiano, Debruyne, Suarez, Lewandoski, VanDijk, Paqueta]}/>
       <AccessButton title="Noticias" text="Las últimas novedades relacionadas al mundial de fútbol 2022, todas en un mismo lugar" buttonText="Acceder" imgsrc={News}/>
-      <FadeIn>
-        <div>
-          <p>Holaa</p>
-        </div>
-      </FadeIn>
+      <RightAccessButton title="Fixture" text="Mira los equipos y crea tus predicciones para el futuro" buttonText="Acceder" imgsrc={News}/>
+      <AccessButton title="Entradas" text="Adquiere por anticipado los boletos para los partidos, exclusivamente desde nuestra tienda digital" buttonText="Acceder" imgsrc={News}/>
     </div>
   );
 }

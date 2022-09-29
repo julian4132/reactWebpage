@@ -12,7 +12,7 @@ export default function FadeIn(props) {
     }, []);
     return (
       <div
-        className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+        className={`fade-${props.direction}-section ${isVisible ? 'is-visible' : ''}`}
         ref={domRef}
       >
         {props.children}
