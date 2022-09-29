@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <Navbar />
       <Slideshow list={[Pedri, Messi, Cristiano, Debruyne, Suarez, Lewandoski, VanDijk, Paqueta]}/>
-      {/*<AccessButton title="Noticias" text="aaa" buttonText="bbb" imgsrc={News}/>*/}
+      <AccessButton title="Noticias" text="Las últimas novedades relacionadas al mundial de fútbol 2022, todas en un mismo lugar" buttonText="Acceder" imgsrc={News}/>
       <FadeIn>
         <div>
           <p>Holaa</p>
