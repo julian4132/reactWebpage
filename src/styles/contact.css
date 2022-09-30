@@ -1,0 +1,51 @@
+.contact {
+    background-color: var(--color1);
+    padding: 30px 50px;
+  }
+  
+  .contact ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .contact li {
+    list-style:none;
+    display: inline-block;
+    transition: transform .2s; /* Animation */
+  }
+  
+  .contact li:hover{
+    transform: scale(1.05);
+  }
+  
+  .contact li a{
+    text-decoration: none;
+    margin: 20px 50px;
+    font-size: 24px;
+  }
+  
+  @media (max-width: 920px) {
+    .contact ul {
+      flex-direction: column;
+      text-align: center;
+      padding-left: 0px;
+    }
+  
+    .contact li{
+      text-decoration: none;
+      margin: 10px;
+    }
+  
+    .contact li a{
+      font-size: 26px;
+    }
+  }
+  
+  @media (max-width: 550px) {
+    .contact li a{
+      margin: 20px 0px;
+      font-size: 20px;
+    }
+  }
+  
+  
