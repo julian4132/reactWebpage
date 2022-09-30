@@ -6,13 +6,13 @@ import $ from "jquery";
 
 export default function Navbar() {
 
-    const [isLoggedIn, setIsLoggedIn] = useState("true");
+    const [isLoggedIn, setIsLoggedIn] = useState("false");
 
     useEffect(() => {
         document.title = isLoggedIn;
         $.ajax({
             type: "POST",
-            url: "http://localhost:80/sitioReact/backend/isLoggedIn.php",
+            url: "http://localhost:80/sitioReact/backend/accounts/isLoggedIn.php",
             //data: []
             success(data) {
                 setIsLoggedIn(data);
