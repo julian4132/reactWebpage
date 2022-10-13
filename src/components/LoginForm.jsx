@@ -1,11 +1,10 @@
-import {React, useState} from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/loginForm.css'
 import $ from 'jquery'
 
 export default function LoginForm() {
     
-    const [isLoggedIn, setIsLoggedIn] = useState("false");
     function handleSubmit(e) {
         e.preventDefault();
         console.log("jaja");
@@ -34,7 +33,7 @@ export default function LoginForm() {
                 if(json['success'] == true) {
                     // succesfuly logged in
 
-                    //window.location.replace("../");
+                    window.location.replace("../");
                 } else {
                     if(json['error'] == "1") {
                         // incorrect password
@@ -63,20 +62,6 @@ export default function LoginForm() {
                 console.log(data);
             }
         });
-
-        $.ajax({
-          type: "POST",
-          url: "http://localhost:80/sitioReact/backend/accounts/isLoggedIn.php",
-          //data: []
-          xhrFields: {
-            withCredentials: true
-          },
-          success(data) {
-              setIsLoggedIn(data);
-              console.log(data);
-          },
-      });
-      console.log(isLoggedIn);
       }
 
   return (

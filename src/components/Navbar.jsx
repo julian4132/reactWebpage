@@ -13,7 +13,9 @@ export default function Navbar() {
         $.ajax({
             type: "POST",
             url: "http://localhost:80/sitioReact/backend/accounts/isLoggedIn.php",
-            //data: []
+            xhrFields: {
+                withCredentials: true
+            },
             success(data) {
                 setIsLoggedIn(data);
                 console.log(data);
