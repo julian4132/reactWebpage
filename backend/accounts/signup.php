@@ -1,4 +1,7 @@
 <?php
+header('Access-Control-Allow-Origin: http://localhost:3000');
+
+
 include_once "connect.php";
 
 //session_start();

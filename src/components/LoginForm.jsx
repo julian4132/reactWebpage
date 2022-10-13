@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../styles/loginForm.css'
+import $ from 'jquery'
 
 export default function LoginForm() {
+    
   return (
   <div className="box">
     <form>
@@ -11,11 +13,11 @@ export default function LoginForm() {
           <p>Introduce los datos para acceder a tu cuenta</p>
           <hr className="formHr"/>
       
-          <label for="email"><b>Email</b></label>
-          <input type="text" class="formInput" placeholder="" name="email" id="email" required/>
+          <label htmlFor="email"><b>Email</b></label>
+          <input type="text" className="formInput" placeholder="" name="email" id="email" required/>
       
-          <label for="psw"><b>Contraseña</b></label>
-          <input type="password" class="formInput" placeholder="" name="psw" id="psw" required/>
+          <label htmlFor="psw"><b>Contraseña</b></label>
+          <input type="password" className="formInput" placeholder="" name="psw" id="psw" required/>
           <hr/>
       
           <button type="submit"  id="submit" className="registerbtn formButton"><span id="submit-text">Ingresar</span></button>
@@ -23,7 +25,7 @@ export default function LoginForm() {
         </div>
       
         <div className="container signin">
-          <p> ¿Todavía no tienes una cuenta? <Link to="../signup" class="registerLink">Registrarse</Link></p>
+          <p> ¿Todavía no tienes una cuenta? <Link to="../signup" className="registerLink">Registrarse</Link></p>
         </div>
       </form>
     <script src="login.js"></script>
