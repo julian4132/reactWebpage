@@ -77,6 +77,9 @@ export default function RegisterForm() {
                 'psw': pass,
                 'psw-repeat': rpt
             },
+            xhrFields: {
+                withCredentials: true
+            },
             success: function(data) {
                 // sin esta linea el js llora por formatos
                 let json = JSON.parse(data)
@@ -84,12 +87,12 @@ export default function RegisterForm() {
                     //aca hay que poner el codigo javascript para que se oculte
                     //el login y signup (ya inicio sesion), y armar tipo una barra con 
                     //mas opciones y para cerrar sesion.
-                    window.location.replace("./emailSent.html");
-                    $(document).ready(function() {
-//                        $('.login-bt').hide();
- //                       $('.my-acc').show();
+                    window.location.replace("/emailSent");
+                    /*$(document).ready(function() {
+                        $('.login-bt').hide();
+                        $('.my-acc').show();
     
-                    });
+                    });*/
                     //login successful
                 } else {
                     if(json['error'] == 'different passwords') {
@@ -134,7 +137,7 @@ export default function RegisterForm() {
             </div>
         
             <div className="container signin">
-            <p>¿Ya tienes una cuenta? <Link to="../login" className="registerLink">Ingresar</Link></p>
+            <p>¿Ya tienes una cuenta? <Link to="/login" className="registerLink">Ingresar</Link></p>
             </div>
         </form>
         <script src="signup.js"></script>

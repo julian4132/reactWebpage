@@ -58,7 +58,7 @@ export default function ProfileData() {
             <hr className="formHr"/>
             <button type="submit" id="submit" className="registerbtn formButton">Cerrar sesión</button>
 
-            <p style={{textAlign: 'center'}}>¿Querés cambiar estos datos? <a href="editProfile.html" className='registerLink'>Editar mi perfil</a> .</p> 
+            <p style={{textAlign: 'center'}}>¿Querés cambiar estos datos? <Link to="/editProfile" className='registerLink'>Editar mi perfil</Link> .</p> 
 
             </div>
         </form>

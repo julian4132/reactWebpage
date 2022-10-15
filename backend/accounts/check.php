@@ -24,17 +24,17 @@ if(isset($_GET['user']) && !empty($_GET['user']) AND isset($_GET['hash']) && !em
         echo '<div class="statusmsg">Tu cuenta está activada, ya puedes iniciar sesión</div>';
         session_start();
         $_SESSION['user_name'] = $user;
-        header('Location: ../index.php');
+        header('Location: https://localhost:3000');
     }else{
         // Error
         //echo '<div class="statusmsg">La url es inválida o ya has registrado tu cuenta</div>';
-        header('Location: ../error.html');
+        header('Location: https://localhost:3000/errorEmail');
     }
                  
 } else{
     // Invalid approach
     //echo '<div class="statusmsg">Error. Por favor, emplear el enlace que fue enviado por correo electrónico.</div>';
-    header('Location: ../error.html');
+    header('Location: https://localhost:3000/errorEmail');
 }
 
 
