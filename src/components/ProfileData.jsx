@@ -31,7 +31,7 @@ export default function ProfileData() {
 
   return (
     <div className="box">
-        <form action="logout.php" method="get">
+        <form action="http://localhost:80/sitioreact/backend/accounts/logout.php" method="get">
             <div className="container">
             <h1>Mi usuario</h1>
             <p>Estos son tus datos personales</p>
