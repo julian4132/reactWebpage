@@ -8,6 +8,7 @@ import EmailSent from "./views/emailSent"
 import EmailSentEdit from "./views/emailSentEdit"
 import ErrorEmailView from "./views/errorEmailView"
 import ErrorEmail2View from "./views/errorEmail2View"
+import AdminView from "./views/adminView"
 {/*import Contact from "./Contact"*/}
 
 function App() {
@@ -23,6 +24,8 @@ function App() {
         <Route path="emailSentEdit" element={ <EmailSentEdit/> } />
         <Route path="errorEmail" element={ <ErrorEmailView/> } />
         <Route path="errorEmail2" element={ <ErrorEmail2View/> } />
+        <Route path="admin" element={ <AdminView/> } />
+
 
         <Route path="*" element={ <Home/> } />
       </Routes>

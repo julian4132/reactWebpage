@@ -42,7 +42,7 @@ export default function ProfileData() {
             {userData.user_name==='admin@admin.com' || userData.user_name==='joaquinvergara070@gmail.com'?
                 (<div>
                     <hr className="formHr"/>
-                    <Link to='admin' className="registerLink">Panel de administrador</Link>
+                    <Link to='/admin' className="registerLink">Panel de administrador</Link>
                 </div>)
                 : (<div></div>)
             }
