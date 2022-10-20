@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 export default function AdminPanel() {
 
-    const [tableData, setTableData] = useState("");
+    const [tableData, setTableData] = useState([]);
 
     useEffect(() => {
         $.ajax({
@@ -15,13 +15,12 @@ export default function AdminPanel() {
                 withCredentials: true
             },
             success(data) {
-                //setIsLoggedIn(data);
-                console.log(data);
-                setTableData(data);
+                setTableData(JSON.parse(data));
             },
         });
-      });
+      }, []);
 
+    
 
   return (
     <div className="adminBox">
@@ -41,8 +40,18 @@ export default function AdminPanel() {
                         <th className="adminTh">Acción</th>
                     </tr>
                 </thead>
-                <tbody /*dangerouslySetInnerHTML={{__html: tableData}}*/>
-                <tr className='adminTr'><td className='adminTd'>juliaximo@gmail.com</td><td className='adminTd'>2022-08-13 17:46:59</td><td className='adminTd'>30</td><td className='adminTd'>2022-10-15 19:08:50</td><td className='adminTd'><a href='./ban.php?email=juliaximo@gmail.com' className='adminLink'>Banear</a></td></tr><tr className='adminTr'><td className='adminTd'>admin@admin.com</td><td className='adminTd'>2022-08-13 17:54:55</td><td className='adminTd'>15</td><td className='adminTd'>2022-10-19 15:03:34</td><td className='adminTd'><a href='./ban.php?email=admin@admin.com' className='adminLink'>Banear</a></td></tr>
+                <tbody>
+                {tableData.map((user, index) => {
+                    return(
+                        <tr className='adminTr' key={index}>
+                            <td className='adminTd'>{user.correo}</td>
+                            <td className='adminTd'>{user.cuando}</td>
+                            <td className='adminTd'>{user.logins}</td>
+                            <td className='adminTd'>{user.lastlogin}</td>
+                            <td className='adminTd'><a href='./ban.php?email=juliaximo@gmail.com' className='adminLink'>Banear</a></td>
+                        </tr>
+                    )
+                })}
                 </tbody>
 
               </table>
