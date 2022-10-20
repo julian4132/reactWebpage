@@ -48,7 +48,7 @@ export default function AdminPanel() {
                             <td className='adminTd'>{user.cuando}</td>
                             <td className='adminTd'>{user.logins}</td>
                             <td className='adminTd'>{user.lastlogin}</td>
-                            <td className='adminTd'><a href='./ban.php?email=juliaximo@gmail.com' className='adminLink'>Banear</a></td>
+                            <td className='adminTd'><Link to={'/ban/'+user.correo} className='adminLink'>Banear</Link></td>
                         </tr>
                     )
                 })}

@@ -23,7 +23,7 @@ if($sql->num_rows > 0) {
 </head>
 <body>
 
-  <a href="./admin.php" class="arrow">
+  <a href="http://localhost:3000/admin" class="arrow">
     <i class="material-symbols-outlined" style="font-size: 60px;">
       arrow_back
     </i>

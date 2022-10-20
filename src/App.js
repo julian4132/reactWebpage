@@ -9,6 +9,7 @@ import EmailSentEdit from "./views/emailSentEdit"
 import ErrorEmailView from "./views/errorEmailView"
 import ErrorEmail2View from "./views/errorEmail2View"
 import AdminView from "./views/adminView"
+import BanView from "./views/BanView"
 {/*import Contact from "./Contact"*/}
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="errorEmail" element={ <ErrorEmailView/> } />
         <Route path="errorEmail2" element={ <ErrorEmail2View/> } />
         <Route path="admin" element={ <AdminView/> } />
+        <Route path="ban/:userEmail" element={ <BanView/> } />
 
 
         <Route path="*" element={ <Home/> } />
