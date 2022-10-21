@@ -1,10 +1,40 @@
-import React from 'react'
+import { React, useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import Ban from '../components/Ban'
+import $ from 'jquery'
+
 
 export default function BanView() {
-    const userEmail = useParams().userEmail;
+  
+  const params = useParams();
+
+  const [userData, setUserData] = useState({'user_name': "asd"});
+    
+    useEffect(() => {
+        $.ajax({
+            type: "POST",
+            url: "http://localhost:80/sitioReact/backend/admin/getData.php",
+            data:{
+              email: params.userEmail
+            },
+            xhrFields: {
+                withCredentials: true
+            },
+            success(data) {
+                setUserData(JSON.parse(data));
+                //setUserData(JSON.parse(data));
+                /*setUserData(userData => ({
+                    ...userData,
+                    ...data
+                }));*/
+                //console.log(userData.user_name);
+                console.log(data);
+                //console.log(JSON.parse(data));
+            },
+        });
+      }, []);
+
   return (
-    <Ban userEmail={userEmail}></Ban>
+    <Ban userData={userData}></Ban>
   )
 }
