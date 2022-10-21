@@ -5,9 +5,9 @@ export default function Ban(props) {
     //console.log(props);
     const user = props.userData;
   return (
-    <div className="box">
+    <div className="adminBox">
     <form>
-        <div className="container">
+        <div className="adminContainer">
             <h1>{user.baneado=="0"? 'Banear Usuario' : 'Desbanear Usuario'}</h1>
             
             <p>Completa el formulario para realizar el bloqueo</p>
