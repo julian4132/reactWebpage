@@ -19,7 +19,7 @@ export default function LoginForm() {
         $(buttonText).css("visibility", "hidden");*/
 
         $.ajax({
-            url: "http://localhost:80/sitioreact/backend/accounts/login.php",
+            url: "https://www.agssoft.ar/NUEVE/backend/accounts/login.php",
             method: "POST",
             data: {
                 'email': user,

@@ -12,7 +12,7 @@ export default function Navbar() {
     useEffect(() => {
         $.ajax({
             type: "POST",
-            url: "http://localhost:80/sitioReact/backend/accounts/isLoggedIn.php",
+            url: "https://www.agssoft.ar/NUEVE/backend/accounts/isLoggedIn.php",
             xhrFields: {
                 withCredentials: true
             },

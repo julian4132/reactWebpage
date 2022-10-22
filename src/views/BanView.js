@@ -13,7 +13,7 @@ export default function BanView() {
     useEffect(() => {
         $.ajax({
             type: "POST",
-            url: "http://localhost:80/sitioReact/backend/admin/getData.php",
+            url: "https://www.agssoft.ar/NUEVE/backend/admin/getData.php",
             data:{
               email: params.userEmail
             },

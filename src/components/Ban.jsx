@@ -11,7 +11,7 @@ export default function Ban(props) {
         e.preventDefault();
         let razon = $('#razon').val();
         $.ajax({
-            url: "http://localhost:80/sitioreact/backend/admin/doBan.php",
+            url: "https://www.agssoft.ar/NUEVE/backend/admin/doBan.php",
             method: "post",
             data: {
                 'email': user.correo,

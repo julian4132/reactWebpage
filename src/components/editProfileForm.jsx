@@ -16,7 +16,7 @@ export default function editProfileForm() {
     console.log(rpt);
 
     $.ajax({
-        url: "https://localhost/sitioreact/backend/accounts/editProfile.php",
+        url: "https://www.agssoft.ar/NUEVE/backend/accounts/editProfile.php",
         method: "post",
         data: {
             'email': user,

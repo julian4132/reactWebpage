@@ -9,12 +9,12 @@ export default function ProfileData() {
     const exampleUserData = {
         'user_name': '',
     }
-    const [userData, setUserData] = useState({'user_name': "asd"});
+    const [userData, setUserData] = useState({'user_name': ""});
     
     useEffect(() => {
         $.ajax({
             type: "POST",
-            url: "http://localhost:80/sitioReact/backend/accounts/userData.php",
+            url: "https://www.agssoft.ar/NUEVE/backend/accounts/userData.php",
             xhrFields: {
                 withCredentials: true
             },
@@ -31,7 +31,7 @@ export default function ProfileData() {
 
   return (
     <div className="box">
-        <form action="http://localhost:80/sitioreact/backend/accounts/logout.php" method="get">
+        <form action="https://www.agssoft.ar/NUEVE/backend/accounts/logout.php" method="get">
             <div className="container">
             <h1>Mi usuario</h1>
             <p>Estos son tus datos personales</p>

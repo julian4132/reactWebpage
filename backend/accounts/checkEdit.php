@@ -27,17 +27,17 @@ if(isset($_GET['user']) && !empty($_GET['user']) AND isset($_GET['hash']) && !em
         $sql = $conn->query("UPDATE `usuarios` SET passhash='".$userPassword."' WHERE nuevoCorreo='".$user."' AND activo='1' AND verifhash='".$hash."' ") or die(mysqli_error());
         //echo '<div class="statusmsg">Tus datos ya fueron cambiados</div>';
         $_SESSION['user_name'] = $user;
-        header('Location: https://localhost:3000/profile');
+        header('Location: https://www.agssoft.ar/NUEVE/profile');
     }else{
         // Error
         //echo '<div class="statusmsg">La url es inválida</div>';
-        header('Location: https://localhost:3000/errorEmail2');
+        header('Location: https://www.agssoft.ar/NUEVE/errorEmail2');
     }
                  
 } else{
     // Invalid approach
     //echo '<div class="statusmsg">Error. Por favor, emplear el enlace que fue enviado por correo electrónico.</div>';
-    header('Location: https://localhost:3000/errorEmail2');
+    header('Location: https://www.agssoft.ar/NUEVE/errorEmail2');
 }
 
 

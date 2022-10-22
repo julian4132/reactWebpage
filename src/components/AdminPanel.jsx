@@ -10,7 +10,7 @@ export default function AdminPanel() {
     useEffect(() => {
         $.ajax({
             type: "POST",
-            url: "http://localhost:80/sitioReact/backend/admin/db_admin.php",
+            url: "https://www.agssoft.ar/NUEVE/backend/admin/db_admin.php",
             xhrFields: {
                 withCredentials: true
             },
@@ -48,7 +48,7 @@ export default function AdminPanel() {
                             <td className='adminTd'>{user.cuando}</td>
                             <td className='adminTd'>{user.logins}</td>
                             <td className='adminTd'>{user.lastlogin}</td>
-                            <td className='adminTd'><Link to={'/ban/'+user.correo} className='adminLink'>Banear</Link></td>
+                            <td className='adminTd'><Link to={'/ban/'+user.correo} className='adminLink'>{user.baneado? "Desbanear" : "Banear"}</Link></td>
                         </tr>
                     )
                 })}

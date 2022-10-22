@@ -70,7 +70,7 @@ export default function RegisterForm() {
         let rpt = $('#psw-repeat').val();
     
         $.ajax({
-            url: "http://localhost:80/sitioreact/backend/accounts/signup.php",
+            url: "https://www.agssoft.ar/NUEVE/backend/accounts/signup.php",
             type: "POST",
             data: {
                 'email': user,
