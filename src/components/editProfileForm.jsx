@@ -34,7 +34,7 @@ export default function editProfileForm() {
                 //aca hay que poner el codigo javascript para que se oculte
                 //el login y signup (ya inicio sesion), y armar tipo una barra con 
                 //mas opciones y para cerrar sesion.
-                window.location.replace("/emailSentEdit");
+                window.location.replace("https://www.agssoft.ar/NUEVE/emailSentEdit");
                 //$('.login-bt').hide();
                 //$('.my-acc').show();
                 //login successful

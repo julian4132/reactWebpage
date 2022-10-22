@@ -33,7 +33,7 @@ export default function LoginForm() {
                 if(json['success'] == true) {
                     // succesfuly logged in
 
-                    window.location.replace("../");
+                    window.location.replace("https://www.agssoft.ar/NUEVE/");
                 } else {
                     if(json['error'] == "1") {
                         // incorrect password
@@ -84,7 +84,7 @@ export default function LoginForm() {
         </div>
       
         <div className="container signin">
-          <p> ¿Todavía no tienes una cuenta? <Link to="../signup" className="registerLink">Registrarse</Link></p>
+          <p> ¿Todavía no tienes una cuenta? <Link to="/NUEVE/signup" className="registerLink">Registrarse</Link></p>
         </div>
       </form>
     <script src="login.js"></script>

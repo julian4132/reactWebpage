@@ -42,7 +42,7 @@ export default function ProfileData() {
             {userData.user_name==='admin@admin.com' || userData.user_name==='joaquinvergara070@gmail.com'?
                 (<div>
                     <hr className="formHr"/>
-                    <Link to='/admin' className="registerLink">Panel de administrador</Link>
+                    <Link to='/NUEVE/admin' className="registerLink">Panel de administrador</Link>
                 </div>)
                 : (<div></div>)
             }
@@ -58,7 +58,7 @@ export default function ProfileData() {
             <hr className="formHr"/>
             <button type="submit" id="submit" className="registerbtn formButton">Cerrar sesión</button>
 
-            <p style={{textAlign: 'center'}}>¿Querés cambiar estos datos? <Link to="/editProfile" className='registerLink'>Editar mi perfil</Link> .</p> 
+            <p style={{textAlign: 'center'}}>¿Querés cambiar estos datos? <Link to="/NUEVE/editProfile" className='registerLink'>Editar mi perfil</Link> .</p> 
 
             </div>
         </form>

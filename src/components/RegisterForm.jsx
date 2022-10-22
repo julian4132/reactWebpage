@@ -87,7 +87,7 @@ export default function RegisterForm() {
                     //aca hay que poner el codigo javascript para que se oculte
                     //el login y signup (ya inicio sesion), y armar tipo una barra con 
                     //mas opciones y para cerrar sesion.
-                    window.location.replace("/emailSent");
+                    window.location.replace("https://www.agssoft.ar/NUEVE/emailSent");
                     /*$(document).ready(function() {
                         $('.login-bt').hide();
                         $('.my-acc').show();
@@ -137,7 +137,7 @@ export default function RegisterForm() {
             </div>
         
             <div className="container signin">
-            <p>¿Ya tienes una cuenta? <Link to="/login" className="registerLink">Ingresar</Link></p>
+            <p>¿Ya tienes una cuenta? <Link to="/NUEVE/login" className="registerLink">Ingresar</Link></p>
             </div>
         </form>
         <script src="signup.js"></script>

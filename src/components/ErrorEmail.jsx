@@ -20,7 +20,7 @@ export default function ErrorEmail() {
         </div>
       
         <div class="container signin">
-          <p> ¿Todavía no tienes una cuenta? <Link to="/signup" className="registerLink">Registrarse</Link></p>
+          <p> ¿Todavía no tienes una cuenta? <Link to="/NUEVE/signup" className="registerLink">Registrarse</Link></p>
         </div>
   </div>
   )

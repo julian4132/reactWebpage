@@ -17,19 +17,19 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={ <Home/> } />
-        <Route path="login" element={ <Login/> } />
-        <Route path="signup" element={ <Signup/> } />
-        <Route path="profile" element={ <Profile/> } />
-        <Route path="editProfile" element={ <EditProfile/> } />
-        <Route path="emailSent" element={ <EmailSent/> } />
-        <Route path="emailSentEdit" element={ <EmailSentEdit/> } />
-        <Route path="errorEmail" element={ <ErrorEmailView/> } />
-        <Route path="errorEmail2" element={ <ErrorEmail2View/> } />
-        <Route path="admin" element={ <AdminView/> } />
-        <Route path="ban/:userEmail" element={ <BanView/> } />
+        <Route path="/NUEVE/login" element={ <Login/> } />
+        <Route path="/NUEVE/signup" element={ <Signup/> } />
+        <Route path="/NUEVE/profile" element={ <Profile/> } />
+        <Route path="/NUEVE/editProfile" element={ <EditProfile/> } />
+        <Route path="/NUEVE/emailSent" element={ <EmailSent/> } />
+        <Route path="/NUEVE/emailSentEdit" element={ <EmailSentEdit/> } />
+        <Route path="/NUEVE/errorEmail" element={ <ErrorEmailView/> } />
+        <Route path="/NUEVE/errorEmail2" element={ <ErrorEmail2View/> } />
+        <Route path="/NUEVE/admin" element={ <AdminView/> } />
+        <Route path="/NUEVE/ban/:userEmail" element={ <BanView/> } />
 
 
-        <Route path="*" element={ <Home/> } />
+        <Route path="/NUEVE/*" element={ <Home/> } />
       </Routes>
     </div>
   )

@@ -36,8 +36,8 @@ export default function Navbar() {
             <li><a href={"#funciones"}>Funciones</a></li>
             <li><a href={"#quienes-somos"}>Quienes somos</a></li>
             <li><a href={"#contacto"}>Contacto</a></li>
-            <li id="login-bt" style={{display: isLoggedIn==="false"? "initial" : "none"}}> <Link to="login"><button className="login-bt" >Ingresar</button></Link></li>
-            <li id="my-acc" style={{display: isLoggedIn==="true"? "initial" : "none"}}><Link to="profile"><button className="login-bt" >Mi Cuenta</button></Link></li>
+            <li id="login-bt" style={{display: isLoggedIn==="false"? "initial" : "none"}}> <Link to="/NUEVE/login"><button className="login-bt" >Ingresar</button></Link></li>
+            <li id="my-acc" style={{display: isLoggedIn==="true"? "initial" : "none"}}><Link to="/NUEVE/profile"><button className="login-bt" >Mi Cuenta</button></Link></li>
         </ul>
     </nav>  );
 }

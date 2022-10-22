@@ -25,7 +25,7 @@ export default function Ban(props) {
                 let json = JSON.parse(data);
                 if(json['success'] == true) {
                     alert(json['msg'])
-                    window.location.replace('/admin');
+                    window.location.replace('/https://www.agssoft.ar/NUEVE/admin');
     
                 }
     
