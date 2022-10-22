@@ -1,5 +1,9 @@
 <?php
+header('Access-Control-Allow-Origin: http://localhost:3000');
+header('Access-Control-Allow-Credentials: true');
 include_once "../accounts/connect.php";
+session_start();
+if($_SESSION['user_name']!='admin@admin.com') die();
 if(isset($_POST['email'], $_POST['razon'])) {
     $mail = $_POST['email'];
     $razon = $_POST['razon'];

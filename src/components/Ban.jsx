@@ -1,9 +1,43 @@
 import React from 'react'
 import '../styles/admin.css'
+import $ from 'jquery';
 
 export default function Ban(props) {
     //console.log(props);
     const user = props.userData;
+
+    function handleSubmit(e){
+            //te deja en la misma pantalla
+        e.preventDefault();
+        let razon = $('#razon').val();
+        $.ajax({
+            url: "http://localhost:80/sitioreact/backend/admin/doBan.php",
+            method: "post",
+            data: {
+                'email': user.correo,
+                'razon': razon
+            },
+            xhrFields: {
+                withCredentials: true
+            },
+            success: function(data) {
+                console.log(data);
+                let json = JSON.parse(data);
+                if(json['success'] == true) {
+                    alert(json['msg'])
+                    window.location.replace('/admin');
+    
+                }
+    
+            },
+            error: function(data) {
+                console.log("err");
+                console.log(data);
+            }
+        });
+    }
+
+
   return (
     <div className="adminBox">
     <form>
@@ -33,7 +67,7 @@ export default function Ban(props) {
                 <textarea id="razon" name="razon" className="adminTextarea"></textarea>
                 
                 <div className="flex">
-                    <button id="submit" type="submit" style={{width: "70%"}} className="adminButton">Enviar</button>
+                    <button id="submit" type="submit" style={{width: "70%"}}  onClick={handleSubmit} className="adminButton">Enviar</button>
                 </div>
 
         </div>
