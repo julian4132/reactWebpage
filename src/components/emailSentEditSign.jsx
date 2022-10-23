@@ -4,7 +4,7 @@ export default function emailSentEditSign() {
 
   return (
     <div className="box">
-    <form action="/profile">
+    <form action="https://agssoft.ar/NUEVE/profile">
         <div className="container">
           <h1>Registro Completado</h1>
           <hr className="formHr"/>

@@ -3,7 +3,7 @@ import React from 'react'
 export default function emailSentSign() {
   return (
     <div class="box">
-    <form action="/login">
+    <form action="https://agssoft.ar/NUEVE/login">
         <div class="container">
           <h1>Usuario Registrado</h1>
           <hr className="formHr"/>
