@@ -24,7 +24,7 @@ export default function Navbar() {
       });
 
   return (
-    <nav>
+    <nav className="myNav">
         <div style={{marginRight: "auto"}}>
             <img className="logo" src={logo} alt="Logo Mundial" />
             <img className="logo-text" src={logoText} alt="Texto Logo" />
