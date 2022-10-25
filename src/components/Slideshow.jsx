@@ -3,39 +3,35 @@ import logoText from "../images/logo_text.png"
 import { useState, useEffect } from "react";
 import "../styles/slideshow.css";
 import React from "react";
+import { Fade }  from "react-slideshow-image";
+import 'react-slideshow-image/dist/styles.css';
+
 
 export default function Slideshow(props) {
-
-    const [fade, setFade] = useState(0);
-    const [index, setIndex] = useState(0);
-    useEffect(() => {
-      console.log(fade);
-      if(fade===1){
-      const timer = setTimeout(
-        () => (setIndex((index===props.list.length-1)? 0 : index+1), setFade(2)),
-        100
-      );
-      return () => clearTimeout(timer);
+    
+  
+    const properties = {
+      prevArrow: <React.Fragment/>,
+      nextArrow: <React.Fragment/>,
+      duration: 5000,
+      pauseOnHover: false
     }
-      else if(fade===2){
-        const timer = setTimeout(
-          () => (setFade(0)),
-          100
-        );
-        return () => clearTimeout(timer);
-      }
-    else{
-      const timer = setTimeout(
-        () => (setFade(1)),
-        4750
-      );
-      return () => clearTimeout(timer);
-    }
-    });
 
     return (
-        <div className={fade===0? "fadeIn img" : "fadeOut img"}>
+      <div className="slide-container">
+      <Fade {...properties}>
+        {props.list.map((fadeImage, index) => (
+          <div className="each-fade" key={index}>
+            {/*<div className="image-container">*/}
+              <img src={fadeImage} style = {{width: "100%"}}/>
+            {/*</div>*/}
+            {/*<h2>{fadeImage.caption}</h2>*/}
+          </div>
+        ))}
+      </Fade>
+      {/*<div className={fade===0? "fadeIn img" : "fadeOut img"}>
           <img src={props.list[index]} style={{"width": "100%"}}/>
-        </div>
+    </div>*/}
+    </div>
     );
 }
