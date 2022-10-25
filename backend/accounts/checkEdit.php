@@ -3,7 +3,6 @@
 include_once "connect.php";
 /*$some_name = session_name("some_name");
 session_set_cookie_params(0, '/NUEVE');*/
-session_start();
 //echo "Saludito";
 
 //echo $_GET['user'];
@@ -28,8 +27,12 @@ if(isset($_GET['user']) && !empty($_GET['user']) AND isset($_GET['hash']) && !em
         $sql = $conn->query("UPDATE `usuarios` SET correo='".$user."' WHERE nuevoCorreo='".$user."' AND activo='1' AND verifhash='".$hash."' ") or die(mysqli_error());
         $sql = $conn->query("UPDATE `usuarios` SET passhash='".$userPassword."' WHERE nuevoCorreo='".$user."' AND activo='1' AND verifhash='".$hash."' ") or die(mysqli_error());
         //echo '<div class="statusmsg">Tus datos ya fueron cambiados</div>';
+        
+        
         $_SESSION['user_name'] = $user;
-        header('Location: https://www.agssoft.ar/NUEVE/profile');
+        //DESCOMENTAR
+
+        header('Location: ../../profile');
         exit();
     }else{
         // Error

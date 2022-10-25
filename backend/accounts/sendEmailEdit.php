@@ -11,7 +11,7 @@ Para que puedas ver los cambios, es necesario que hagas click en este link.
 
 Link de cambio de perfil:
  
-https://agssoft.ar/NUEVE/backend/accounts/checkEdit.php?user='.$userEmail.'&hash='.$hash.'
+https://www.agssoft.ar/NUEVE/backend/accounts/checkEdit.php?user='.$userEmail.'&hash='.$hash.'
  
 ';
                      

@@ -12,7 +12,7 @@ Para ello, tenés que hacer click en el siguiente link.
 
 Link de activación de la cuenta:
  
-https://agssoft.ar/NUEVE/backend/accounts/check.php?user='.$userEmail.'&hash='.$hash.'
+https://www.agssoft.ar/NUEVE/backend/accounts/check.php?user='.$userEmail.'&hash='.$hash.'
  
 ';
                      
